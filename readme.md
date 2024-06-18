@@ -1,1 +1,1 @@
-Projetos de React.
+Minhas atividades de estudos de react.
