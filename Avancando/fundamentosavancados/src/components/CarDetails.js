@@ -1,6 +1,8 @@
-import React from 'react';
+import {useState} from 'react';
 
-const CarDetails = ({brand, km, color}) => {
+const CarDetails = ({brand, km, color, newCar}) => {
+  const [x] = useState(newCar);
+
   return (
     <div>
         <h2>Detalhes do carro</h2>
@@ -8,9 +10,11 @@ const CarDetails = ({brand, km, color}) => {
             <li>Marca: {brand}</li>
             <li>KM: {km}</li>
             <li>Cor: {color}</li>
+            {x && <li> Novo carro: sim</li>}
+            {!x && <li> Novo carro: não</li>}
         </ul>
     </div>
   );
 };
 
-export default CarDetails
+export default CarDetails;
